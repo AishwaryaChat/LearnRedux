@@ -901,16 +901,10 @@ eval("/* harmony export (immutable) */ __webpack_exports__[\"a\"] = warning;\n/*
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar React = __webpack_require__(16);\nvar ReactDOM = __webpack_require__(146);\n\n// object de-structuring\n\nvar _require = __webpack_require__(229),\n    Route = _require.Route,\n    Router = _require.Router,\n    IndexRoute = _require.IndexRoute,\n    hashHistory = _require.hashHistory;\n\n{/* history prop tells react that we want to route '#' sign followed by the path, in order to maintain routes for our app */}\n{/* Route is used to create paths for different components */}\nReactDOM.render(React.createElement(Router, { history: hashHistory }), document.getElementById('app'));\n\n__webpack_require__(120);//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTE5LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2FwcC9hcHAuanN4P2JiNDkiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgUmVhY3QgPSByZXF1aXJlKCdyZWFjdCcpXG5jb25zdCBSZWFjdERPTSA9IHJlcXVpcmUoJ3JlYWN0LWRvbScpXG5cbi8vIG9iamVjdCBkZS1zdHJ1Y3R1cmluZ1xuY29uc3Qge1JvdXRlLCBSb3V0ZXIsIEluZGV4Um91dGUsIGhhc2hIaXN0b3J5fSA9IHJlcXVpcmUoJ3JlYWN0LXJvdXRlcicpXG5cbnsgLyogaGlzdG9yeSBwcm9wIHRlbGxzIHJlYWN0IHRoYXQgd2Ugd2FudCB0byByb3V0ZSAnIycgc2lnbiBmb2xsb3dlZCBieSB0aGUgcGF0aCwgaW4gb3JkZXIgdG8gbWFpbnRhaW4gcm91dGVzIGZvciBvdXIgYXBwICovIH1cbnsgLyogUm91dGUgaXMgdXNlZCB0byBjcmVhdGUgcGF0aHMgZm9yIGRpZmZlcmVudCBjb21wb25lbnRzICovIH1cblJlYWN0RE9NLnJlbmRlcihcbiAgPFJvdXRlciBoaXN0b3J5PXtoYXNoSGlzdG9yeX0+XG4gIDwvUm91dGVyPixcbiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpXG4pXG5cbnJlcXVpcmUoJy4vcmVkdXgtZXhhbXBsZS5qcycpXG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gYXBwL2FwcC5qc3giXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBS0EiLCJzb3VyY2VSb290IjoiIn0=");
+eval("\n\nvar React = __webpack_require__(16);\nvar ReactDOM = __webpack_require__(146);\n\n// object de-structuring\n\nvar _require = __webpack_require__(229),\n    Route = _require.Route,\n    Router = _require.Router,\n    IndexRoute = _require.IndexRoute,\n    hashHistory = _require.hashHistory;\n\n{/* history prop tells react that we want to route '#' sign followed by the path, in order to maintain routes for our app */}\n{/* Route is used to create paths for different components */}\nReactDOM.render(React.createElement(\n  'div',\n  null,\n  'Hello Reux'\n), document.getElementById('app'));\n\n// require('./redux-example.js')\n__webpack_require__(265);//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTE5LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2FwcC9hcHAuanN4P2JiNDkiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgUmVhY3QgPSByZXF1aXJlKCdyZWFjdCcpXG5jb25zdCBSZWFjdERPTSA9IHJlcXVpcmUoJ3JlYWN0LWRvbScpXG5cbi8vIG9iamVjdCBkZS1zdHJ1Y3R1cmluZ1xuY29uc3Qge1JvdXRlLCBSb3V0ZXIsIEluZGV4Um91dGUsIGhhc2hIaXN0b3J5fSA9IHJlcXVpcmUoJ3JlYWN0LXJvdXRlcicpXG5cbnsgLyogaGlzdG9yeSBwcm9wIHRlbGxzIHJlYWN0IHRoYXQgd2Ugd2FudCB0byByb3V0ZSAnIycgc2lnbiBmb2xsb3dlZCBieSB0aGUgcGF0aCwgaW4gb3JkZXIgdG8gbWFpbnRhaW4gcm91dGVzIGZvciBvdXIgYXBwICovIH1cbnsgLyogUm91dGUgaXMgdXNlZCB0byBjcmVhdGUgcGF0aHMgZm9yIGRpZmZlcmVudCBjb21wb25lbnRzICovIH1cblJlYWN0RE9NLnJlbmRlcihcbiAgPGRpdj5IZWxsbyBSZXV4PC9kaXY+LFxuICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwJylcbilcblxuLy8gcmVxdWlyZSgnLi9yZWR1eC1leGFtcGxlLmpzJylcbnJlcXVpcmUoJy4vcmVkdXgtdG9kby1leGFtcGxlLmpzJylcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBhcHAvYXBwLmpzeCJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUdBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ }),
-/* 120 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nvar redux = __webpack_require__(260);\n\nconsole.log('Statrting redux example');//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTIwLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2FwcC9yZWR1eC1leGFtcGxlLmpzPzRiYWMiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgcmVkdXggPSByZXF1aXJlKCdyZWR1eCcpXG5cbmNvbnNvbGUubG9nKCdTdGF0cnRpbmcgcmVkdXggZXhhbXBsZScpXG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gYXBwL3JlZHV4LWV4YW1wbGUuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9");
-
-/***/ }),
+/* 120 */,
 /* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1915,6 +1909,13 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n
 
 module.exports = __webpack_require__(119);
 
+
+/***/ }),
+/* 265 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar redux = __webpack_require__(260);\nconsole.log('Starting todo App');\n\nvar stateDefault = {\n  searchText: '',\n  showCompleted: false,\n  todos: []\n};\n\nvar reducer = function reducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : stateDefault;\n\n  return state;\n};\n\nvar store = redux.createStore(reducer);\n\nvar currentState = store.getState();\nconsole.log(currentState);//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjY1LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2FwcC9yZWR1eC10b2RvLWV4YW1wbGUuanM/YTkxOSJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCByZWR1eCA9IHJlcXVpcmUoJ3JlZHV4JylcbmNvbnNvbGUubG9nKCdTdGFydGluZyB0b2RvIEFwcCcpXG5cbmxldCBzdGF0ZURlZmF1bHQgPSB7XG4gIHNlYXJjaFRleHQ6ICcnLFxuICBzaG93Q29tcGxldGVkOiBmYWxzZSxcbiAgdG9kb3M6IFtdXG59XG5cbmxldCByZWR1Y2VyID0gKHN0YXRlID0gc3RhdGVEZWZhdWx0KSA9PiB7XG4gIHJldHVybiBzdGF0ZVxufVxuXG5sZXQgc3RvcmUgPSByZWR1eC5jcmVhdGVTdG9yZShyZWR1Y2VyKVxuXG5sZXQgY3VycmVudFN0YXRlID0gc3RvcmUuZ2V0U3RhdGUoKVxuY29uc29sZS5sb2coY3VycmVudFN0YXRlKVxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIGFwcC9yZWR1eC10b2RvLWV4YW1wbGUuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFIQTtBQUNBO0FBS0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ })
 /******/ ]);
