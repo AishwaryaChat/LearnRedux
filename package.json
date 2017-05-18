@@ -29,6 +29,7 @@
     "jquery": "^3.2.1",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
+    "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.5",
     "script-loader": "^0.7.0",
     "scss-loader": "0.0.1",
