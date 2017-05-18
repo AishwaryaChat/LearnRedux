@@ -11,5 +11,5 @@ const {Route, Router, IndexRoute, hashHistory} = require('react-router')
   //   document.getElementById('app')
   // )
 
-// require('./redux-example.js')
-require('./redux-todo-example.js')
+require('./redux-example.js')
+// require('./redux-todo-example.js')
