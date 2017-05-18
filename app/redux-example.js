@@ -1,4 +1,5 @@
 const redux = require('redux')
+const axios = require('axios')
 
 console.log('Statrting redux example')
 
@@ -93,10 +94,56 @@ let removeMovie = (id) => {
   }
 }
 
+// Map reducer and action generator
+// -----------------------------------
+
+let mapReducer = (state = {isFetching: false, url: undefined}, action) => {
+  switch (action.type) {
+    case 'START_LOCATION_FETCH':
+      return {
+        isFetching: true,
+        url: undefined
+      }
+    case 'COMPLETE_LOCATION_FETCH':
+      return {
+        isFetching: false,
+        url: action.url
+      }
+    default:
+      return state
+  }
+}
+
+let startLocationFetch = () => {
+  return {
+    type: 'START_LOCATION_FETCH'
+  }
+}
+
+let completeLocationFetch = (url) => {
+  return {
+    type: 'COMPLETE_LOCATION_FETCH',
+    url
+  }
+}
+
+let fetchLocation = () => {
+  store.dispatch(startLocationFetch())
+  axios('http://ipinfo.io')
+  .then((res) => {
+    console.log(res)
+    let loc = res.data.loc
+    let baseURL = 'http://maps.google.com?q='
+
+    store.dispatch(completeLocationFetch(baseURL + loc))
+  })
+}
+
 let reducer = redux.combineReducers({
   name: nameReducer,
   hobbies: hobbiesReducer,
-  movies: moviesReducer
+  movies: moviesReducer,
+  map: mapReducer
 })
 
 let store = redux.createStore(reducer, redux.compose( // redux.compose let us add middleware functions
@@ -106,8 +153,12 @@ let store = redux.createStore(reducer, redux.compose( // redux.compose let us ad
 // Subsribe to changes
 let unsubscribe = store.subscribe(() => {
   let state = store.getState()
-  // console.log('Name is: ', state.name)
-  document.getElementById('app').innerHTML = state.name
+
+  if (state.isFetching) {
+    document.getElementById('app').innerHTML = 'Loading...'
+  } else if (state.map.url) {
+    document.getElementById('app').innerHTML = '<a href="' + state.map.url + '" target="_blank">View Your location</a>'
+  }
   console.log('New state: ', store.getState())
 })
 
@@ -115,6 +166,8 @@ let unsubscribe = store.subscribe(() => {
 
 let currentState = store.getState()
 console.log('Current State: ', currentState)
+
+fetchLocation()
 
 store.dispatch(changeName('Aishwarya'))
 
@@ -129,6 +182,8 @@ store.dispatch(addHobby('cooking'))
 store.dispatch(addMovie('Jab we met', 'romance'))
 
 store.dispatch(removeHobby(1))
+
+store.dispatch(removeMovie(2))
 
 store.dispatch(changeName('Mrinal'))
 
