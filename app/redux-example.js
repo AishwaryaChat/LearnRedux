@@ -2,15 +2,8 @@ const redux = require('redux')
 
 console.log('Statrting redux example')
 
-let stateDefault = {
-  name: 'Anonymous',
-  hobbies: [],
-  movies: []
-}
-
-let nextHobbyId = 1
-let nextMovieId = 1
-
+// Name reducer and action generator
+// ---------------------------------
 let nameReducer = (state = 'Anonymous', action) => {
   switch (action.type) {
     case 'CHANGE_NAME':
@@ -20,6 +13,16 @@ let nameReducer = (state = 'Anonymous', action) => {
   }
 }
 
+let changeName = (name) => {
+  return {
+    type: 'CHANGE_NAME',
+    name
+  }
+}
+
+// Hobbies reducer and action generator
+// -----------------------------------
+let nextHobbyId = 1
 let hobbiesReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_HOBBY':
@@ -39,6 +42,23 @@ let hobbiesReducer = (state = [], action) => {
   }
 }
 
+let addHobby = (hobby) => {
+  return {
+    type: 'ADD_HOBBY',
+    hobby
+  }
+}
+
+let removeHobby = (id) => {
+  return {
+    type: 'REMOVE_HOBBY',
+    id
+  }
+}
+
+// Movies reducer and action generator
+// ----------------------------------
+let nextMovieId = 1
 let moviesReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_MOVIE':
@@ -55,6 +75,21 @@ let moviesReducer = (state = [], action) => {
       })
     default:
       return state
+  }
+}
+
+let addMovie = (movie, genere) => {
+  return {
+    type: 'ADD_MOVIE',
+    movie,
+    genere
+  }
+}
+
+let removeMovie = (id) => {
+  return {
+    type: 'REMOVE_MOVIE',
+    id
   }
 }
 
@@ -81,49 +116,20 @@ let unsubscribe = store.subscribe(() => {
 let currentState = store.getState()
 console.log('Current State: ', currentState)
 
-store.dispatch({
-  type: 'CHANGE_NAME',
-  name: 'Aishwarya'
-})
+store.dispatch(changeName('Aishwarya'))
 
-store.dispatch({
-  type: 'ADD_HOBBY',
-  hobby: 'dancing'
-})
+store.dispatch(addHobby('dancing'))
 
-store.dispatch({
-  type: 'ADD_MOVIE',
-  movie: 'Dabang',
-  genere: 'action'
-})
+store.dispatch(addMovie('Dabang', 'action'))
 
-store.dispatch({
-  type: 'CHANGE_NAME',
-  name: 'Biyani'
-})
+store.dispatch(changeName('Biyani'))
 
-store.dispatch({
-  type: 'ADD_HOBBY',
-  hobby: 'cooking'
-})
+store.dispatch(addHobby('cooking'))
 
-store.dispatch({
-  type: 'ADD_MOVIE',
-  movie: 'Jab we met',
-  genere: 'romance'
-})
+store.dispatch(addMovie('Jab we met', 'romance'))
 
-store.dispatch({
-  type: 'REMOVE_HOBBY',
-  id: 1
-})
+store.dispatch(removeHobby(1))
 
-store.dispatch({
-  type: 'CHANGE_NAME',
-  name: 'Mrinal'
-})
+store.dispatch(changeName('Mrinal'))
 
-store.dispatch({
-  type: 'REMOVE_MOVIE',
-  id: 2
-})
+store.dispatch(removeHobby(2))
